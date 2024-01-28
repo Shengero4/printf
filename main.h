@@ -6,6 +6,8 @@
 
 void	_putchar(char c, int *count);
 void	_putstr(char *str, int *count);
+void	_putnbr(int n, int *count);
+void	_putnbr_u(unsigned int n, int *count);
 int	_printf(const char *formart, ...);
 
 #endif

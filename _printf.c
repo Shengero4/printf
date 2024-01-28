@@ -7,6 +7,8 @@ void	handle_formats(const char c, va_list args, int *count)
 		_putchar(va_arg(args, int), count);
 	else if (c == 's')
 		_putstr(va_arg(args, char *), count);
+	else if (c == 'd' || c == 'i')
+		_putnbr(va_arg(args, int), count);
 	else
 		_putchar(c, count);
 }
