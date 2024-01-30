@@ -9,6 +9,14 @@ void	handle_formats(const char c, va_list args, int *count)
 		_putstr(va_arg(args, char *), count);
 	else if (c == 'd' || c == 'i')
 		_putnbr(va_arg(args, int), count);
+	else if (c == 'u')
+		_putnbr_u(va_arg(args, unsigned int), count);
+	else if (c == '%')
+		_putchar('%', count);
+	else if (c == 'x')
+		_puthex(va_arg(args, unsigned int), SYMBOLS_HEX_LOWER, count);
+	else if (c == 'X')
+		_puthex(va_arg(args, unsigned int), SYMBOLS_HEX, count);
 	else
 		_putchar(c, count);
 }

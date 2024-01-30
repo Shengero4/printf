@@ -3,11 +3,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+# define SYMBOLS_HEX "0123456789ABCDEF"
+# define SYMBOLS_HEX_LOWER "0123456789abcdef"
 
 void	_putchar(char c, int *count);
 void	_putstr(char *str, int *count);
 void	_putnbr(int n, int *count);
 void	_putnbr_u(unsigned int n, int *count);
-int	_printf(const char *formart, ...);
+void	_puthex(unsigned int n, char *base, int *count);
+int	_printf(const char *format, ...);
 
 #endif
