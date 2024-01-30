@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 void	handle_formats(const char c, va_list args, int *count)
 {
 	if (c == 'c')
@@ -24,6 +23,8 @@ void	handle_formats(const char c, va_list args, int *count)
 
 	else if (c == 'o')
 		print_octal(va_arg(args, unsigned int), count);
+	else if (c == 'S')
+		print_string_special(va_arg(args, char *), count);
 	else
 		_putchar(c, count);
 }
@@ -45,7 +46,9 @@ int	_printf(const char *format, ...)
 			handle_formats(*format, args, &count);
 		}
 		else
+		{
 			_putchar(*format, &count);
+		}
 		format++;
 	}
 	va_end(args);
