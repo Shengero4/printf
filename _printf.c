@@ -21,6 +21,9 @@ void	handle_formats(const char c, va_list args, int *count)
 		_putaddr(va_arg(args, unsigned long), count);
 	else if (c == 'b')
 		print_binary(va_arg(args, unsigned int), count);
+
+	else if (c == 'o')
+		print_octal(va_arg(args, unsigned int), count);
 	else
 		_putchar(c, count);
 }

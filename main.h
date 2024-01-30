@@ -13,6 +13,7 @@ void	_putnbr_u(unsigned int n, int *count);
 void	_puthex(unsigned int n, char *base, int *count);
 void	_putaddr(unsigned long n, int *count);
 void	print_binary(unsigned int n, int *count);
+void	print_octal(unsigned int n, int *count);
 int	_printf(const char *format, ...);
 
 #endif
