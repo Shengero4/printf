@@ -13,7 +13,7 @@ void	_putaddr(unsigned long n, int *count)
 	if (n == 0)
 	{
 		_putchar('0', count);
-		return ;
+		return;
 	}
 	_puthex_addr(n, SYMBOLS_HEX_LOWER, count);
 }
