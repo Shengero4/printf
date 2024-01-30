@@ -26,7 +26,10 @@ void	handle_formats(const char c, va_list args, int *count)
 	else if (c == 'S')
 		print_string_special(va_arg(args, char *), count);
 	else
-		_putchar(c, count);
+	{
+		_putchar('%', count);
+	       	_putchar(c, count);
+	}
 }
 
 int	_printf(const char *format, ...)
