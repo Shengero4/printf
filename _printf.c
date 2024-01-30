@@ -17,7 +17,7 @@ void	handle_formats(const char c, va_list args, int *count)
 	else if (c == 'X')
 		_puthex(va_arg(args, unsigned int), SYMBOLS_HEX, count);
 	else if (c == 'p')
-		_putaddr(va_arg(args, unsigned long), count);
+		print_pointer(va_arg(args, void *), count);
 	else if (c == 'b')
 		print_binary(va_arg(args, unsigned int), count);
 
