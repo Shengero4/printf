@@ -20,6 +20,7 @@ void	handle_formats(const char c, va_list args, int *count)
 	else
 		_putchar(c, count);
 }
+
 int	_printf(const char *format, ...)
 {
 	va_list args;
@@ -43,3 +44,4 @@ int	_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+
